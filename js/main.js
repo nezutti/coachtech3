@@ -1,23 +1,35 @@
-const globalConst = 'globalConst';
-let globalLet = 'globalLet';
+const items = [
+  {
+    name: "水",
+    price: 100,
+  },
+  {
+    name: "リンゴジュース",
+    price: 130,
+  },
+  {
+    name: "コーヒー",
+    price: 150,
+  },
+  {
+    name: "モンスター",
+    price: 200,
+  },
+  {
+    name: "レッドブル(大)",
+    price: 250,
+  },
+];
 
-function dummyFunc(callback) {
-   const localConst = 'localConst';
-  let localLet = 'localLet';
-  callback(localConst, LocalLet);
-
+const buy = function(pay, itemName) {
+  const findItem = items.find((i) => i.name == itemName);
+  if (!findItem) return console.log("その商品は存在しません。");
+  if (pay < findItem.price) return console.log("お金が足りません。");
+  const change = pay - findItem.price;
+  console.log(findItem.name + "をお買い上げありがとうございます。");
+  if (change <= 0) {
+    return console.log("お釣りはありません。");
+  }
+  console.log("お釣りは" + change + "円になります。");
 }
 
-console.log(globalConst);
-console.log(globalLet);
-
-// 値の更新
-globalLet = 'updateGlobalLet';
-console.log(globalLet);
-
-function callLog(a, b) {
-  console.log(a);
-  console.log(b);
-}
-
-dummyFunc(callLog)
