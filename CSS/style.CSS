@@ -1,31 +1,39 @@
-.header{
-  background:#ff188a;
-  height:70px;
-  color:#ff188a;
+.card{
+  display:flex;
+  width:760px;
+  margin:20px auto;}
+ 
+.card__img{
+  width:40%;
 }
 
-.wrap{
-  width:90%;
-  margin: 0 auto;
-  column-count: 3;
-  
+img{
+  width:100%;
+  vertical-align: top;
 }
 
-.item{
-  break-inside:avoid;
-  text-align:center;
+.card__content{
+  padding:20px;
+  border:1px solid black;
 }
 
-.item img {
-  width: 100%;
-  margin-top: 30px;
+.card__text{
+  font-size:20px;
+  font-weight:bold;
 }
 
-footer {
-  background: #f7ea00;
-  height: 70px;
-  color: #fff;
-  margin-top: 30px;
+.card__tag{
+  display:flex;
+  margin-top:40px;
+
 }
 
+.card__tag__list{
+  margin-right:20px;
+  font-size:15px;
+  font-weight:bold;
+}
 
+.card__tag__list--red{
+  color:red;
+}
