@@ -20,21 +20,16 @@
 
 
 <body>
-  
-  <div class="tab">
-    <div class="tab-menu">
-      <li class="tab-menu__item active">タブ1</li>
-      <li class="tab-menu__item">タブ2</li>
-      <li class="tab-menu__item">タブ3</li>
-    </div>
-    <div class="tab-content">
-      <div class="tab-content__item show">コンテンツ1</div>
-      <div class="tab-content__item">コンテンツ2</div>
-      <div class="tab-content__item">コンテンツ3</div>
+  <input type="button" id="openBtn" value="開く" class="openBtn">
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <div class="modal__content-inner">
+        <p>モーダル</p>
+        <input type="button" id="closeBtn" value="閉じる">
+      </div>
     </div>
   </div>
   
-
   <script src="js/main.js"></script>
 </body>
 
